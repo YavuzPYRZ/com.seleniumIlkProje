@@ -9,6 +9,8 @@ public class C06_navigate {
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
+
+
         driver.navigate().to("https://www.amazon.com/");
         Thread.sleep(2000);
         driver.navigate().to("https://www.facebook.com");
@@ -16,6 +18,14 @@ public class C06_navigate {
 
         // amazona geri donelim
         driver.navigate().back();
+        Thread.sleep(2000);
+
+        // yeniden facebook'a giri doneleim
+        driver.navigate().forward();
+        Thread.sleep(2000);
+
+        // sayfayı yenileyelim (refresh)
+        driver.navigate().refresh();
         Thread.sleep(2000);
 
 
