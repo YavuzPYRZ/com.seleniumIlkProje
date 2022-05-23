@@ -3,7 +3,7 @@ package day02_driverMethodları;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class C04_DriverMethodlari {
+public class C04_getPageSource {
     public static void main(String[] args) {
 
         // amazon sitesine gidip Kaynak kodlarına "spand less" yazdıgını test edin.
@@ -15,12 +15,13 @@ public class C04_DriverMethodlari {
 
 
         String sayfaKaynakKodları =  driver.getPageSource();
-        String arananKelime = "spend less";
+        String arananKelime = "Gateway";
         if (sayfaKaynakKodları.contains(arananKelime)){
             System.out.println("Kaynak Kodu Testi PASSED");
 
         }else{
             System.out.println("Kaynak kodlarında" + arananKelime +"yok test FAILLED");
         }
+        driver.close();
     }
 }

@@ -26,11 +26,17 @@ public class C08_Calisma2 {
         if (baslikNe.contains(arananKelime)){
             System.out.println("Başlıta "+ arananKelime +" kelimesi var.");
 
-        }System.out.println("Başlıta "+ arananKelime +" kelimesi yok.");
+        }else System.out.println("Başlıta "+ arananKelime +" kelimesi yok.");
 
 
       //        3 ) url nin https://www.amazon.com a esit oldugunu test edin.
 
+       String expectedUrl = driver.getCurrentUrl();
+       String  actualUrl = "https://www.amazon.com";
+       if (expectedUrl.equals(actualUrl)){
+           System.out.println("Url test past");
+       }else
+        System.out.println("Actual Url" + expectedUrl + " Url test failed");
 
 
         driver.close();
